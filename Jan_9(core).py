@@ -1,11 +1,12 @@
 import random
 
 class RPSGame:
+#-----------initialize player score-----------
     def __init__(self,  player_score=0, computer_score=0):
         
         self.player_score = player_score
         self.computer_score = computer_score
-
+#---------------User inputs name and number of rounds------------
     def round(self):
             player_name = input("Enter player name: ")
             num_rounds = int(input("Enter number of rounds you want to play: "))
@@ -16,8 +17,7 @@ class RPSGame:
              computer_choice = random.choice(choices)
              print(f"Computer chose: {computer_choice}")
 
-
-
+#-------------------Game logic---------------
 
              if player_choice == 'rock' and computer_choice == 'scissors':
                 self.player_score+=1
@@ -43,7 +43,7 @@ class RPSGame:
              
              
              print(f"Result: {result}")
-            
+#-------------shows score------------------
              def scoreboard():
                print("-" * 30 + "SCOREBOARD" + "-" * 30)
                print(f"{player_name} : {self.player_score}")
@@ -52,8 +52,7 @@ class RPSGame:
             scoreboard()
              
 
-
-   
+#------------------Class and method call--------------------   
 
 Game = RPSGame()
 Game.round()
@@ -66,4 +65,5 @@ Game.round()
 
 
             
+
         
